@@ -7,8 +7,6 @@
 // 0..length, and a data element, add a new node to the list
 // so that it has the given index
 void insert_nth(Node** head_ref, int index, int data) {
-    Node* current_node = *head_ref;
-    Node* next_node = current_node->next;
     Node* new_node = (Node*)malloc(sizeof(Node));
     new_node->data = data;
     new_node->next = NULL;
@@ -19,6 +17,8 @@ void insert_nth(Node** head_ref, int index, int data) {
         new_node->next = *head_ref;
         *head_ref = new_node;
     } else {
+        Node* current_node = *head_ref;
+        Node* next_node = current_node->next;
         // no need for `head_ref` mutation here
         while (index > 1) {
             index--;
