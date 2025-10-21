@@ -2,10 +2,8 @@
 #include <assert.h>
 #include <stdio.h>
 
-/*
-Given a list and an int, return the number of times that int occurs
-in the list.
-*/
+// Given a list and an int, return the number of times that int occurs
+// in the list.
 int count(Node* head, int search_for) {
     int c = 0;
     while (head) {
