@@ -55,9 +55,9 @@ void push(Node** head_ref, int data) {
 // Allocates and returns the list {1, 2, 3}
 Node* build_one_two_three(void) {
     Node* head = NULL;
-    push(&head, 30);
-    push(&head, 20);
-    push(&head, 10);
+    push(&head, 3);
+    push(&head, 2);
+    push(&head, 1);
 
     return head;
 }
